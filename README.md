@@ -1,4 +1,4 @@
-# Custom WLED Build for M5Stack Atom Lite with Animated Staircase Usermod
+# Custom WLED Build for M5Stack Atom Lite with Animated Staircase Usermod (WLED 14.3)
 
 This repository contains a custom WLED firmware build for the M5Stack Atom Lite, featuring specific hardware-related adjustments to optimize performance and compatibility. The primary modifications include a change in the LED pin and the button pin configurations to avoid hardware conflicts and enable the use of the USERMOD_ANIMATED_STAIRCASE feature.
 
