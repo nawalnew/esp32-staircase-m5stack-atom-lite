@@ -54,6 +54,13 @@ To flash this custom firmware onto your M5Stack Atom Lite, follow the steps belo
 
 After flashing all components, restart your M5Stack Atom Lite to apply the changes. The device should now operate with the new firmware, incorporating the custom settings and features detailed above.
 
+## Useful Resources
+https://docs.m5stack.com/en/core/atom_lite
+https://install.wled.me/
+https://serial.huhn.me/
+https://wled-install.github.io/
+https://wled-compile.github.io/
+
 ## Support
 
 If you encounter any issues or have questions regarding this custom build, feel free to open an issue in this repository or reach out for support through the [WLED Discord community](https://discord.gg/wled).
