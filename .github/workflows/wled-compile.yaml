@@ -31,7 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32dev' >>platformio.ini
-        echo 'build_flags = ${env:esp32dev.build_flags} -D WLED_ENABLE_SIMPLE_UI -D USERMOD_ANIMATED_STAIRCASE' >>platformio.ini
+        echo 'build_flags = ${env:esp32dev.build_flags} -D LEDPIN=27 USERMOD_ANIMATED_STAIRCASE' >>platformio.ini
         
         pio run -e custom_build || pio run -e custom_build
     - name: Copy Files
