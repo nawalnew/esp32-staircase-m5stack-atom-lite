@@ -60,6 +60,8 @@ https://install.wled.me/
 https://serial.huhn.me/
 https://wled-install.github.io/
 https://wled-compile.github.io/
+https://github.com/Aircoookie/WLED/blob/main/usermods/Animated_Staircase/README.md
+
 
 ## Support
 
