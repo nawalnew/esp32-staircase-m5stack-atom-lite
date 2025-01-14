@@ -62,11 +62,3 @@ https://wled-install.github.io/
 https://wled-compile.github.io/
 https://github.com/Aircoookie/WLED/blob/main/usermods/Animated_Staircase/README.md
 
-
-## Support
-
-If you encounter any issues or have questions regarding this custom build, feel free to open an issue in this repository or reach out for support through the [WLED Discord community](https://discord.gg/wled).
-
----
-
-Feel free to adjust the content as needed to better fit your project or to add any additional sections that might be helpful for users or contributors.
