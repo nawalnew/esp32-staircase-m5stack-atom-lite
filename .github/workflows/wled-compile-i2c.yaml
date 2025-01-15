@@ -32,26 +32,21 @@ jobs:
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32dev' >>platformio.ini
         echo 'build_flags = ${env:esp32dev.build_flags} -D LEDPIN=27 -D BTNPIN=39 -D HW_PIN_SCL=32 -D HW_PIN_SDA=26 -D USERMOD_ANIMATED_STAIRCASE -D USERMOD_PIN_MANAGER' >>platformio.ini
-        echo 'extra_scripts = pre:rename_firmware.py' >>platformio.ini
-
-        # Create rename_firmware.py
-        echo 'Import("env")' >rename_firmware.py
-        echo 'env.Replace(PROGNAME="firmware_staircase_pinmanager")' >>rename_firmware.py
-
+        
         pio run -e custom_build || pio run -e custom_build
     - name: Copy Files
       run: |
         cd $GITHUB_WORKSPACE
         git rm -r $GITHUB_WORKSPACE/*.bin || true
         WLEDFOLDERNAME=`cat /tmp/WLEDtemp/wledfoldername`
-        cp ${WLEDFOLDERNAME}/build_output/firmware/firmware_staircase_pinmanager.bin $GITHUB_WORKSPACE/
+        cp ${WLEDFOLDERNAME}/build_output/firmware/custom_build.bin $GITHUB_WORKSPACE/
         date -I | tr -d '\n' >$GITHUB_WORKSPACE/last_update_date.txt
     - name: Commit Files
       run: |
         cd $GITHUB_WORKSPACE
         git config user.name "GitHub Actions Bot"
         git config user.email "<>"
-        git add $GITHUB_WORKSPACE/firmware_staircase_pinmanager.bin
+        git add $GITHUB_WORKSPACE/custom_build.bin
         git add $GITHUB_WORKSPACE/last_update_date.txt
-        git commit -m "Commit Custom Build with Pin Manager"
+        git commit -m "Commit Custom Build"
         git push origin main
